@@ -1,0 +1,9 @@
+include requirements.txt
+include README.md
+include LICENSE
+include .env.example
+include config/*.yaml
+include data/raw/*.xlsx
+include data/sql/*.sql
+recursive-include notebooks *.ipynb
+recursive-include tableau *.twbx
