@@ -1,0 +1,19 @@
+database:
+  host: localhost
+  port: 5432
+  name: weather_db
+  user: your_username
+  password: your_password
+
+api:
+  open_meteo:
+    url: "https://archive-api.open-meteo.com/v1/era5"
+    params:
+      latitude: 37.7974
+      longitude: -121.2161
+      timezone: "America/Los_Angeles"
+
+forecasting:
+  target_date: "2026-12-31"
+  arima_order: [2, 1, 2]
+  seasonal_order: [1, 1, 1, 52]
