@@ -1,0 +1,14 @@
+# Use efficient data types
+dtype_optimization = {
+    'temp_max': 'float32',
+    'temp_min': 'float32', 
+    'precipitation': 'float32',
+    'date': 'datetime64[ns]'
+}
+
+df = df.astype(dtype_optimization)
+
+# Process data in chunks
+def process_large_data(file_path, chunk_size=10000):
+    for chunk in pd.read_csv(file_path, chunksize=chunk_size):
+        process_chunk(chunk)
